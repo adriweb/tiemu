@@ -133,7 +133,8 @@ static void load_lionel_file_type(FILE *f)   // Lionel Debroux formatted file: 2
         // get line
         if (!fgets(str, sizeof(str), f) || feof(f))
              break;
-		for (number = strlen(str) - 1; str[number] == '\n' || str[number] == '\r'; number--) str[number] = '\0';
+        for (number = strlen(str) - 1; number >= 0 && (str[number] == '\n' || str[number] == '\r'); number--)
+             str[number] = '\0';
 
         if(!strchr(str, ':'))
             continue;
