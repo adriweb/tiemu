@@ -1,0 +1,19 @@
+{
+  "name": "tiemu",
+  "version-string": "3.04",
+  "homepage": "https://github.com/debrouxl/tiemu",
+  "description": "TIEmu is an emulator of Texas Instruments hand-helds (89/89T/92/92+/V200), written with GTK+. Features include highly accurate emulation and a graphical debugger.",
+  "dependencies": [
+    "pkgconf",
+    "glib",
+    "gettext",
+    {
+      "name": "gdk-pixbuf",
+      "features": [ "others" ]
+    },
+    "gtk2",
+    "sdl2",
+    "tilibs"
+  ],
+  "builtin-baseline": "a993be073c6baea8674117f3eaed6e2d2486aaae"
+}
