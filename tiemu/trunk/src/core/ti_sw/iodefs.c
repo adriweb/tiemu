@@ -144,10 +144,10 @@ static int get_bits(const char *s, IO_DEF* t)
 	memset(t->bits, 0, nbits);
 	for(i = 0, j = 0; i < nbits; i++)
 	{
-		if(b[i] == '.')
+		if(!all && b[i] == '.')
 		{
 		}
-		else if(isdigit(b[i]) || all)
+		else if(all || isdigit(b[i]))
 		{
 			t->bits[j++] = nbits - i - 1;
 		}
